@@ -1,0 +1,40 @@
+<div class="__dashboard_main">
+  <button mat-button class="hamburger" [ngClass]="(opened)?'hamburger active':'hamburger'" (click)="opened=!opened;"><mat-icon>{{opened ? 'close' : 'menu'}}</mat-icon></button>
+  <nav class="__sidenav" [ngClass]="(opened)?'__sidenav active':'__sidenav'">
+        <mat-nav-list>
+          <div mat-subheader class="profile">
+            <img src="./assets/avatar.jpg" />
+            <h4>Anderson Paak</h4>
+            <span>Musician</span>
+            </div>
+          <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard">
+            <mat-icon>dashboard</mat-icon> Dashboard
+          </a>
+          <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/files">
+            <mat-icon>file_copy</mat-icon> Files
+          </a>
+          <a mat-list-item routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/news">
+            <mat-icon outline>dynamic_feed</mat-icon> News
+          </a>
+          <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/users">
+            <mat-icon outline>supervisor_account</mat-icon> Users
+          </a>
+          <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/faq">
+            <mat-icon>question_answer</mat-icon> FAQ
+          </a>
+          <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/help">
+            <mat-icon>help_outline</mat-icon> Help
+          </a>
+          <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/settings">
+            <mat-icon>more_horiz</mat-icon> Settings
+          </a>
+        </mat-nav-list>
+  </nav>
+  <div class="__content">
+      <mat-toolbar>
+          <a href="#"><mat-icon>language</mat-icon>English</a>
+          <a href="#" (click)="logout()" ><mat-icon>logout</mat-icon></a>
+      </mat-toolbar>
+      <div class="__router"><router-outlet></router-outlet></div>
+  </div>
+</div>

@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body {
+  overscroll-behavior: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: #f5f5f5;
+  margin: 0;
+  color: #2d3e63;
+}
+body,input,textarea {font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+img,
+a,
+br,
+h2, h3, h4, h5 , h6,
+li, ul,
+i,
+span,
+mat-list-item,
+li h4 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+p {
+  line-height: 1.5;
+  color: #7d828b
+}
+
+.__sidenav .mat-list-item-content {
+  padding: 0 30px !important;
+}
+.users-list .mat-list-item-content {
+  padding: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .__sidenav {
+    width: 100%;
+    max-width: unset;
+    position: absolute;
+    height: 100%;
+    width: 260px !important;
+    transform: translateX(-260px);
+    transition: 0.4s ease all;
+  }
+
+  .__sidenav.active {
+      transform: translateX(0);
+  }
+
+  .__dashboard_main {
+    display: block;
+  }
+
+  .__sidenav a {
+    display: none;
+  }
+}

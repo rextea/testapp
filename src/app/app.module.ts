@@ -3,14 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DashboardModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,117 @@
+mat-nav-list {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  flex-wrap: wrap;
+  margin: 50px 0;
+
+  mat-list-item {
+    width: 48%;
+    cursor: pointer;
+    outline: 0;
+    border-radius: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-weight: 400;
+    border: 1px solid transparent;
+    transition: 0.3s ease all;
+    &.active {
+      border: 1px solid #d8d8d8;
+      background: #f9f9f9;
+    }
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%; margin-right: 15px;
+    }
+  }
+
+}
+
+.user-information {
+  width: 390px;
+  height: 450px;
+  position: absolute;
+    right: 0;
+    top: 64px;
+    border-left: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+
+    .information {
+      button {
+        display: none;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        color: #7d828b;
+        margin-top: 12px;
+        margin-bottom: 3px;
+      }
+      padding: 20px 30px;
+    }
+
+  .head {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    .blur {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      filter: blur(10px);
+    }
+
+    .avatar {
+      position: relative;
+      z-index: 1;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        margin: 30px auto 0 auto;
+    }
+
+    h4 {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  mat-nav-list {
+    width: 100%;
+    mat-list-item {
+      width: 100%;
+    }
+  }
+
+  .user-information {
+    width: 90%;
+    height: 81%;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    z-index: 888;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+
+    .information {
+      button {
+        display: block; margin-top: 10px;
+      }
+    }
+  }
+}
