@@ -1,9 +1,9 @@
 <h2>Users</h2>
 <p>If you want to get contact information for a spesific user,<br />
 just select group and select him from the list below:</p>
-
+<button mat-raised-button (click)="users.addUser()"  color="primary">add user</button>
 <mat-nav-list class="users-list" role="list">
-  <mat-list-item [ngClass]="{'active': user.id==userInfo?.id}"  (click)="toggleInfo(user)" *ngFor="let user of users?.data" role="listitem"><img [src]="user.avatar" class="avatar" /> {{user.first_name}} {{user.last_name}}</mat-list-item>
+  <mat-list-item [ngClass]="{'active': user.id==userInfo?.id}"  (click)="toggleInfo(user)" *ngFor="let user of users.users" role="listitem"><img [src]="user.avatar" class="avatar" /> {{user.first_name}} {{user.last_name}}</mat-list-item>
 </mat-nav-list>
 
 <div class="user-information" *ngIf="userInfo" >

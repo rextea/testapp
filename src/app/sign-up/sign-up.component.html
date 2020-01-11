@@ -1,6 +1,6 @@
 <mat-card>
   <h1>Welcome</h1>
-  <p>Please sign in to continue:</p>
+  <p>Please fill the details to sign-up:</p>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <input matInput name="email" placeholder="Email" formControlName="email">
@@ -18,7 +18,7 @@
    </mat-error>
   </mat-form-field>
   <span class="error">{{error}}</span>
-  <button mat-raised-button color="primary">sign in</button>
+  <button mat-raised-button color="primary">sign up</button>
 </form>
-<a routerLink="/sign-up" class="goto">Don't have an account? Sign Up</a>
+<a routerLink="/sign-in" class="goto">Already have an account? Sign In</a>
 </mat-card>

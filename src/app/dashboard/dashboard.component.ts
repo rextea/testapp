@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +11,8 @@ export class DashboardComponent implements OnInit {
   opened = false;
 
   constructor(
-    public router: Router
+    public router: Router,
+    private authenticationService: AuthenticationService
   ) {
     router.events.subscribe((val) => {
       this.opened=false;
@@ -21,7 +23,6 @@ export class DashboardComponent implements OnInit {
   }
 
   logout() {
-    localStorage.removeItem('user');
-    this.router.navigate(['sign-in']);
+    this.authenticationService.logout();
   }
 }
